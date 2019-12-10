@@ -1,0 +1,489 @@
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.landing-bg {
+    background: url("../images/landing-bg.jpg");
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    /* animation: 4s down-anim; */
+}
+
+@keyframes down-anim {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
+    }
+    30% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    }
+}
+
+.landing {
+    width: 100%;
+    display: flex;
+    position: relative;
+    height: 115vh;
+    align-items: flex-start;
+    justify-content: center;
+    background: linear-gradient(to top, rgba(0, 0, 20, 1), rgba(0, 0, 20, 0.5));
+    background-blend-mode: multiply;
+    background-size: cover;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.landing * {
+    position: relative;
+}
+
+.landing h1 {
+    font-size: 15em;
+    color: white;
+    margin: 10px;
+}
+
+.landing h2 {
+    font-size: 2em;
+    color: white;
+    margin: 10px;
+    font-weight: 100;
+}
+
+.landing h3 {
+    font-size: 2em;
+    color: white;
+    margin: 10px;
+    font-weight: 100;
+}
+
+.button-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.landing button {
+    padding: 0.7em 1.4em;
+    color: white;
+    font-size: 2.2em;
+    font-style: normal;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    margin: 10px;
+    transition-duration: 0.2s;
+    align-self: center;
+    border-radius: 10px;
+}
+
+.landing .register {
+    border: none;
+    background: indigo;
+}
+
+.landing button:hover {
+    background: white;
+    color: black;
+}
+
+.landing .register:hover {
+    background: rgb(130, 0, 223);
+    color: white;
+    transform: scale(1.05);
+}
+
+.logo-left {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 5%;
+}
+
+.logo-right {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 7em;
+}
+
+.salutation {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    font-weight: 300;
+    font-size: 2em;
+    color: white;
+    padding: 0em 2em;
+    margin: 0;
+}
+
+.salutation-mobile {
+    display: none;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 300;
+    font-size: 2em;
+    color: white;
+    padding: 0em 2em;
+    margin: 0;
+}
+
+.salutation span {
+    display: flex;
+    align-self: center;
+    margin: 0 1em;
+}
+
+.salutation img {
+    height: 3em;
+}
+
+.salutation-mobile img {
+    align-self: center;
+    height: 4em;
+    margin-bottom: 0.5em;
+}
+
+@media only screen and (max-width: 1080px) {
+    .landing-bg {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
+        height: 100vh;
+    }
+
+    .landing {
+        align-items: center;
+        padding: 0 2em;
+        text-align: center;
+    }
+
+    .landing h1 {
+        font-size: 5em;
+    }
+
+    .landing h2 {
+        font-size: 1em;
+    }
+
+    .landing h3 {
+        font-size: 1.2em;
+    }
+
+    .button-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .landing button {
+        font-size: 1em;
+    }
+
+    .salutation {
+        display: none;
+    }
+
+    .logo-right {
+        display: none;
+    }
+
+    .salutation-mobile {
+        display: flex;
+    }
+}
+
+@keyframes enter-top {
+    from {
+        top: -10px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.targets-section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    align-items: center;
+}
+
+section h1 {
+    display: flex;
+    color: #222;
+    font-size: 3em;
+    font-weight: 100;
+    border-bottom: 3px solid indigo;
+    padding: 0.3em;
+    text-align: center;
+}
+
+.quote {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-width: 70%;
+    max-height: 30vh;
+    margin: 1.5em;
+}
+
+.right {
+    flex-direction: row-reverse;
+}
+
+.quote h2 {
+    color: indigo;
+    border-bottom: 1px solid indigo;
+    font-size: 2em;
+    font-weight: normal;
+    margin: 0.6em 1.2em;
+    padding: 0.5em;
+}
+
+.quote img {
+    position: relative;
+    width: 30%;
+}
+
+.quote-detail {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.quote p {
+    font-size: 1.2em;
+    color: #222;
+    font-weight: 400;
+    padding: 0em 2em;
+}
+
+.about-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    align-items: center;
+}
+
+.about-section p {
+    display: flex;
+    padding: 1em 5em;
+    font-size: 1.5em;
+    color: #333;
+}
+
+@media only screen and (max-width: 1080px) {
+    .quote {
+        max-height: 100vh;
+        padding: 1em 1em 1em 1em;
+        max-width: 90%;
+        box-shadow: 0 0 0;
+        border: none;
+        background-color: rgb(252, 252, 252);
+        flex-direction: column-reverse;
+    }
+
+    .quote .right {
+        flex-direction: column-reverse;
+    }
+    .quote img {
+        height: auto;
+        width: 100%;
+    }
+
+    .quote h2 {
+        font-size: 1.2em;
+        margin: 0;
+    }
+
+    .quote p {
+        padding: 0;
+    }
+
+    .about-section p {
+        width: 100%;
+        padding: 0.3em;
+        text-align: justify;
+        font-size: 1.1em;
+    }
+}
+
+.contact {
+    display: flex;
+    padding: 3em;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .row {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+
+.row .col {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 33.33%;
+    border-right: 1px solid gray;
+    min-height: 40vh;
+    font-size: 1.5em;
+    color: #333;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.col h1 {
+    font-size: 2.5em;
+    font-weight: 200;
+    color: #333;
+    border: none;
+    padding: 0;
+}
+
+footer {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    background-color: rgb(42, 14, 61);
+    color: white;
+    height: 40vh;
+    border-bottom: 3em solid rgb(16, 5, 24);
+}
+
+footer .copy {
+    position: absolute;
+    display: flex;
+    color: white;
+    bottom: 2em;
+    right: 2em;
+}
+
+footer .col {
+    display: flex;
+    width: 33.33%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+    padding: 3em;
+}
+
+footer .heading {
+    color: white;
+    margin: 0.4em;
+    font-size: 2em;
+    text-align: left;
+    align-self: flex-start;
+}
+
+footer .mobile {
+    display: none;
+}
+
+.col img {
+    width: 50%;
+}
+
+footer .desktop {
+    display: flex;
+}
+
+footer .mobile {
+    display: none;
+}
+
+footer .row {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 1080px) {
+    footer .desktop {
+        display: none;
+    }
+
+    footer .mobile {
+        display: flex;
+    }
+
+    .contact .row {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .row .col {
+        border: none;
+        min-height: auto;
+        border-bottom: 2px solid gray;
+        padding: 2em 0;
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 5em;
+        align-items: center;
+    }
+
+    footer .desktop {
+        display: none;
+    }
+
+    footer .col {
+        width: 100%;
+        font-size: 0.8em;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer h1 {
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+    }
+
+    footer .heading {
+        align-self: center;
+    }
+
+    .mobile img {
+        flex-grow: 100;
+        padding: 1em;
+    }
+
+    .row {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile {
+        display: flex;
+    }
+}
