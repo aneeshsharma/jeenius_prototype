@@ -111,6 +111,10 @@ body {
     transform: scale(1.05);
 }
 
+.landing .logo {
+    height: 30%;
+}
+
 .logo-left {
     position: absolute;
     top: 1em;
@@ -172,8 +176,13 @@ body {
 
     .landing {
         align-items: center;
-        padding: 0 2em;
+        padding: 0 0.1em;
         text-align: center;
+    }
+
+    .landing .logo {
+        height: auto;
+        width: 97%;
     }
 
     .landing h1 {
@@ -244,8 +253,7 @@ section h1 {
     position: relative;
     display: flex;
     flex-direction: row;
-    max-width: 70%;
-    max-height: 30vh;
+    width: 70%;
     margin: 1.5em;
 }
 
@@ -264,7 +272,8 @@ section h1 {
 
 .quote img {
     position: relative;
-    width: 30%;
+    width: 90%;
+    height: auto;
 }
 
 .quote-detail {
